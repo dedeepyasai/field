@@ -1,0 +1,12 @@
+<p>payment works!</p>
+
+<form [formGroup]= "payForm" (ngSubmit)="onsubmit()">
+    <input type = "text" placeholder="Full Name" formControlName = "fName"><br>
+    <input type = "email" placeholder="Email Address" formControlName = "email"><br>
+    <input type = "text" placeholder="Card Number" formControlName = "carddet"><br>
+    <input type = "text" placeholder="CVV" formControlName = "cvv"><br>
+    <input type = "text" placeholder="Valid Thru" formControlName = "valid"><br>
+    <input type = "number" placeholder="Phone Number" formControlName = "phoneNo"><br>
+    
+    <button type="submit" [disabled]="!payForm.valid" >Submit</button>
+</form>  

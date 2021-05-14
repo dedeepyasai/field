@@ -1,0 +1,12 @@
+<p>details works!</p>
+
+<form [formGroup]= "detForm" (ngSubmit)="onsubmit()">
+    <input type = "text" placeholder="First Name" formControlName = "fName"><br>
+    <input type = "text" placeholder="Last Name" formControlName = "lName"><br>
+    <input type = "email" placeholder="Email Address" formControlName = "email"><br>
+    <input type = "text" placeholder="Monthly Advertisement Budget" formControlName = "monthadvbug"><br>
+    <input type = "number" placeholder="Phone Number" formControlName = "phoneNo"><br>
+    
+    <button type="submit" [disabled]="!detForm.valid" >Submit</button>
+</form> 
+<p> {{data}}</p>        
